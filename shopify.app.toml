@@ -1,3 +1,29 @@
-# This file stores configurations for your Shopify app.
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
+client_id = "bf66cba992247b721c59e7bb71edafa0"
+name = "shopfy-admin-action-block"
+handle = "shopfy-admin-action-block"
+application_url = "https://forums-girl-canvas-blocking.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "snow-ski-poc.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://forums-girl-canvas-blocking.trycloudflare.com/auth/callback",
+  "https://forums-girl-canvas-blocking.trycloudflare.com/auth/shopify/callback",
+  "https://forums-girl-canvas-blocking.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
